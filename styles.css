@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+
+:root {
+  --D-Dk-Cyan: rgb(91, 164, 164);
+  --Lt-Gr-Cyan-bg: hsl(180, 52%, 96%);
+  --Lt-Gr-Cyan: rgb(238, 246, 246);
+  --Dk-Gr-Cyan: rgb(123, 142, 142);
+  --Vr-Dk-Gr-Cyan: #2c3a3a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: var(--Lt-Gr-Cyan-bg);
+}
+
+.header {
+  width: 100vw;
+  height: 160px;
+  background-color: var(--D-Dk-Cyan);
+  background-image: url("./images/bg-header-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: clamp(330px, 90%, 1140px);
+  margin: 0 auto;
+}
+
+.filter {
+  width: 100%;
+  min-height: 75px;
+  border-radius: 5px;
+  background-color: #fff;
+  align-items: center;
+  display: none;
+  position: relative;
+  top: -35px;
+  box-shadow: 0 3px 40px -15px rgba(91, 164, 164, 0.8);
+}
+
+.filter_container {
+  width: 100%;
+  height: 100%;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clear_button {
+  color: var(--Dk-Gr-Cyan);
+  background-color: #fff;
+  display: block;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  margin: auto 40px auto auto;
+}
+
+.clear_button:hover {
+  color: var(--D-Dk-Cyan);
+  border-bottom: 1px solid var(--D-Dk-Cyan);
+  position: relative;
+  top: 1px;
+}
+
+.filter_tag {
+  background-color: var(--Lt-Gr-Cyan);
+  color: var(--D-Dk-Cyan);
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  margin: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  overflow: hidden;
+}
+
+.filter_requirement {
+  padding: 10px;
+}
+
+.filter_X {
+  background-color: var(--D-Dk-Cyan);
+  color: #fff;
+  width: 35px;
+  height: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.filter_X:hover {
+  color: #fff;
+  background-color: var(--Vr-Dk-Gr-Cyan);
+}
+
+.card {
+  width: 100%;
+  min-height: 260px;
+  position: relative;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  text-align: left;
+  border-radius: 5px;
+  box-shadow: 0 3px 40px -15px rgba(91, 164, 164, 0.8);
+}
+
+.card.feature {
+  border-left: 5px solid var(--D-Dk-Cyan);
+}
+
+.icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url("./images/photosnap.svg");
+  background-size: cover;
+  top: -10%;
+}
+
+.company {
+  color: var(--D-Dk-Cyan);
+  display: inline-block;
+  letter-spacing: -1px;
+}
+
+.new {
+  background-color: var(--D-Dk-Cyan);
+  color: #ffffff;
+  display: inline-block;
+  margin-left: 15px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0px;
+}
+
+.featured {
+  background-color: var(--Vr-Dk-Gr-Cyan);
+  color: #ffffff;
+  display: inline-block;
+  margin-left: 5px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0px;
+}
+
+.position {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.position:hover {
+  color: var(--D-Dk-Cyan);
+}
+
+.posted {
+  color: var(--Dk-Gr-Cyan);
+  font-size: 13px;
+  display: inline-block;
+  padding: 20px 0;
+}
+
+.dot {
+  margin: 0 15px;
+}
+
+.requirements {
+  border-top: 1px solid var(--Dk-Gr-Cyan);
+}
+
+.requirement {
+  background-color: var(--Lt-Gr-Cyan);
+  color: var(--D-Dk-Cyan);
+  padding: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  margin: 20px 20px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.requirement:hover {
+  color: var(--Lt-Gr-Cyan);
+  background-color: var(--D-Dk-Cyan);
+}
+
+@media (min-width: 900px) {
+  .header {
+    background-image: url("./images/bg-header-desktop.svg");
+  }
+
+  .card {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+  }
+
+  .job {
+    margin: 0 auto 0 25px;
+  }
+
+  .requirements {
+    border: none;
+    display: flex;
+    align-items: center;
+  }
+  .requirement {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .icon {
+    position: relative;
+    width: 90px;
+    height: 90px;
+  }
+}
